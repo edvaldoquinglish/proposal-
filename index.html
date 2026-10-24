@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Uma pergunta especial de amor — proposta interativa criada por Edvaldo Valódia Ndonga (Edvaldo Quinglish)">
+  <meta name="author" content="Edvaldo Valódia Ndonga (Edvaldo Quinglish)">
+  <title>Tenho uma pergunta pra você ❤️</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Background decorative blobs -->
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- Animated floating flowers SVG -->
+  <div class="decorative-svgs" aria-hidden="true">
+    <svg class="flower flower-1" viewBox="0 0 100 100" width="80" height="80">
+      <g class="petals">
+        <ellipse cx="50" cy="30" rx="12" ry="22" fill="#FFB6C1" opacity="0.85"/>
+        <ellipse cx="50" cy="30" rx="12" ry="22" fill="#FFB6C1" opacity="0.85" transform="rotate(72 50 50)"/>
+        <ellipse cx="50" cy="30" rx="12" ry="22" fill="#FFB6C1" opacity="0.85" transform="rotate(144 50 50)"/>
+        <ellipse cx="50" cy="30" rx="12" ry="22" fill="#FFB6C1" opacity="0.85" transform="rotate(216 50 50)"/>
+        <ellipse cx="50" cy="30" rx="12" ry="22" fill="#FFB6C1" opacity="0.85" transform="rotate(288 50 50)"/>
+      </g>
+      <circle cx="50" cy="50" r="10" fill="#FFD700"/>
+    </svg>
+    <svg class="flower flower-2" viewBox="0 0 100 100" width="60" height="60">
+      <g class="petals">
+        <ellipse cx="50" cy="28" rx="10" ry="20" fill="#FF69B4" opacity="0.8"/>
+        <ellipse cx="50" cy="28" rx="10" ry="20" fill="#FF69B4" opacity="0.8" transform="rotate(60 50 50)"/>
+        <ellipse cx="50" cy="28" rx="10" ry="20" fill="#FF69B4" opacity="0.8" transform="rotate(120 50 50)"/>
+        <ellipse cx="50" cy="28" rx="10" ry="20" fill="#FF69B4" opacity="0.8" transform="rotate(180 50 50)"/>
+        <ellipse cx="50" cy="28" rx="10" ry="20" fill="#FF69B4" opacity="0.8" transform="rotate(240 50 50)"/>
+        <ellipse cx="50" cy="28" rx="10" ry="20" fill="#FF69B4" opacity="0.8" transform="rotate(300 50 50)"/>
+      </g>
+      <circle cx="50" cy="50" r="8" fill="#FFF8DC"/>
+    </svg>
+    <svg class="flower flower-3" viewBox="0 0 100 100" width="70" height="70">
+      <g class="petals">
+        <ellipse cx="50" cy="32" rx="11" ry="20" fill="#FF2D55" opacity="0.75"/>
+        <ellipse cx="50" cy="32" rx="11" ry="20" fill="#FF2D55" opacity="0.75" transform="rotate(45 50 50)"/>
+        <ellipse cx="50" cy="32" rx="11" ry="20" fill="#FF2D55" opacity="0.75" transform="rotate(90 50 50)"/>
+        <ellipse cx="50" cy="32" rx="11" ry="20" fill="#FF2D55" opacity="0.75" transform="rotate(135 50 50)"/>
+        <ellipse cx="50" cy="32" rx="11" ry="20" fill="#FF2D55" opacity="0.75" transform="rotate(180 50 50)"/>
+        <ellipse cx="50" cy="32" rx="11" ry="20" fill="#FF2D55" opacity="0.75" transform="rotate(225 50 50)"/>
+        <ellipse cx="50" cy="32" rx="11" ry="20" fill="#FF2D55" opacity="0.75" transform="rotate(270 50 50)"/>
+        <ellipse cx="50" cy="32" rx="11" ry="20" fill="#FF2D55" opacity="0.75" transform="rotate(315 50 50)"/>
+      </g>
+      <circle cx="50" cy="50" r="9" fill="#FFE4E1"/>
+    </svg>
+  </div>
+
+  <!-- Header animado -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <div class="logo-heart">
+        <svg viewBox="0 0 24 24" width="28" height="28" class="header-heart">
+          <path fill="#FF2D55" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+      </div>
+      <span class="header-title">Uma pergunta especial</span>
+      <button id="musicToggle" class="music-btn" title="Música de fundo" aria-label="Ligar/desligar música">
+        <span class="music-icon">🎵</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card reveal" id="card">
+      <div class="top">
+        <span class="pill reveal-delay-1">💌 mensagem especial</span>
+        <h1 class="reveal-delay-2">Eu precisava<br><i>te dizer</i> isso</h1>
+        <p class="lead reveal-delay-3">Desde que você apareceu, tudo ficou mais leve. Guardei isso por muito tempo.</p>
+      </div>
+
+      <div class="question-box reveal-delay-4">
+        <div class="girl-name-wrapper">
+          <span class="girl-name" id="girlName">Meu Amor</span>
+        </div>
+        <h2 id="questionText">Quer namorar comigo?</h2>
+        <p class="hint" id="hintText">Prometo te fazer sorrir todos os dias</p>
+        <div class="btns">
+          <button id="yesBtn" class="btn-yes">SIM, QUERO! 😍</button>
+          <button id="noBtn" class="btn-no">Não</button>
+        </div>
+        <span class="attempts" id="attempts"></span>
+      </div>
+    </div>
+
+    <!-- Success screen -->
+    <div class="success" id="successScreen">
+      <div class="success-content">
+        <div class="big-heart">❤️</div>
+        <h1>Ela disse SIM!</h1>
+        <p>Somos oficialmente namorados.<br>Nosso primeiro capítulo começa agora.</p>
+
+        <div class="share-section">
+          <p class="share-label">Compartilha essa alegria ✨</p>
+          <div class="share-grid">
+            <button class="share-btn whatsapp" data-platform="whatsapp" title="WhatsApp">
+              <span>WhatsApp</span>
+            </button>
+            <button class="share-btn instagram" data-platform="instagram" title="Instagram">
+              <span>Instagram</span>
+            </button>
+            <button class="share-btn facebook" data-platform="facebook" title="Facebook">
+              <span>Facebook</span>
+            </button>
+            <button class="share-btn tiktok" data-platform="tiktok" title="TikTok">
+              <span>TikTok</span>
+            </button>
+            <button class="share-btn youtube" data-platform="youtube" title="YouTube">
+              <span>YouTube</span>
+            </button>
+            <button class="share-btn email" data-platform="email" title="E-mail">
+              <span>E-mail</span>
+            </button>
+            <button class="share-btn sms" data-platform="sms" title="SMS">
+              <span>SMS</span>
+            </button>
+            <button class="share-btn native" data-platform="native" title="Mais opções">
+              <span>Mais…</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="restart" class="btn-secondary">Ver de novo</button>
+        </div>
+        <canvas id="confetti"></canvas>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer animado -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="footer-inner">
+      <div class="footer-hearts">
+        <span>💕</span><span>💖</span><span>❤️</span>
+      </div>
+      <p class="footer-author">
+        Criado com amor por<br>
+        <strong>Edvaldo Valódia Ndonga</strong><br>
+        <span class="aka">(Edvaldo Quinglish)</span>
+      </p>
+      <p class="footer-license">
+        Licença MIT • Use livremente com crédito
+      </p>
+      <div class="footer-badges">
+        <span class="badge">❤️ Made with Love</span>
+        <span class="badge">🇦🇴 Angola</span>
+        <span class="badge">✨ v2.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating hearts container -->
+  <div class="hearts" id="hearts"></div>
+
+  <!-- Background music (user interaction required) -->
+  <!-- Coloca o teu ficheiro de música em music.mp3 ou altera o src -->
+  <audio id="bgMusic" loop preload="none">
+    <source src="music.mp3" type="audio/mpeg">
+    <!-- Fallback: podes usar um URL público de música royalty-free -->
+  </audio>
+
+  <script src="app.js"></script>
+</body>
+</html>
